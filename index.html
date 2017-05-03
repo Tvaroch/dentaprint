@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>DENTAPRINT</title>
+	<meta name="author" content="TVAROCH, s.r.o. Matej Korytár" />
+	<meta name="description" content="Dentaprint je špecializované pracovisko na 3D tlač v oblasti stomatológie" />
+	<meta name="keywords"  content="dentaprint, implantologia, 3d tlač, 3d printing, ortodoncia, 3d tisk, stomatológia, biocompatible" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<style>
+
+
+	body{
+		color: #333;
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	}
+
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		margin:0;
+		padding:0;
+	}
+	h2{
+		font-size: 2em;
+		margin: 0 0 50px 0;
+		font-family: arial,helvetica;
+	}
+		#header {
+		position:fixed;
+		height: auto;
+		display:block;
+		width: 100%;
+		background: #fff;
+		z-index:9;
+		text-align:center;
+		color: #f2f2f2;
+		padding: 20px 0 0 0;
+		top:0px;
+		padding:15px 50px;
+		border-bottom:2px solid #009CD6;
+		box-sizing:border-box;
+
+	}
+	.span2 {
+		width:50%;
+		text-align:left;
+		float:left;
+		
+		box-sizing:border-box;
+		display:block;
+	}
+	.span2:first-child {
+		padding: 0px 0 0 100px;
+	}
+	.span2:last-child {
+		padding: 0px 100px 0 0;
+	}
+	.span2 img {
+		 border: 0 none;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+	}
+
+
+
+
+
+	/* Common styles
+	* --------------------------------------- */
+	img{
+	    -webkit-transition: all 0.7s ease-out;
+		-moz-transition: all 0.7s ease-out;
+		-o-transition: all 0.7s ease-out;
+		transition: all 0.7s ease-out;
+	}
+	.section{
+		text-align:center;
+		overflow:hidden;
+	}
+	.wrap{
+		width: auto;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+	}
+	.box{
+		text-align: center;
+		color: #808080;
+		font-size: 1.2em;
+		line-height: 1.6em;
+		margin-top:200px;
+	}
+
+
+
+	
+	/*screen resolutions between 620px and 800px*/
+	@media all and (min-width: 620px) and (max-width: 800px){
+		#section1 .imgsContainer{
+			margin-top: -278px;
+			margin-left: -685px;
+			width: 647px;
+			height: 563px;
+		}
+
+	}
+
+	/*screen resolutions lower than 620px*/
+	@media all and (max-width: 620px){
+		#section1 .imgsContainer{
+			margin-top: -208px;
+			margin-left: -516px;
+			width: 534px;
+			height: 464px;
+		}
+				.span2 {
+		width:100%;
+		text-align:center;
+		height:50%;
+	}
+				.span2 img {
+		height:80%;
+	}
+	.span2:first-child {
+		padding: 0px 0 0 0px;
+	}
+	.span2:last-child {
+		padding: 0px 20px ;
+	}
+	.box {
+		height:100%;
+		margin-top:100px;
+	}
+	}
+
+
+
+
+	/* Section 2
+	* --------------------------------------- */
+	
+	#section2 .imgsContainer,
+	#staticImg .imgsContainer,
+	#section3 .imgsContainer,
+	{
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		display: block;
+		margin-top: -288px;
+		margin-left: -636px;
+		width: 0;
+		height: 0;
+
+		-webkit-transition: all 1.2s ease-in-out;
+		-moz-transition: all 1.2s ease-in-out;
+		-o-transition: all 1.2s ease-in-out;
+		transition: all 1.2s ease-in-out;
+	}
+	
+	#section2.moveUp .imgsContainer{
+		top: 50%;
+	}
+
+	#section2.moveDown .imgsContainer,
+	#staticImg .imgsContainer{
+		top: 90%;
+	}
+
+	#section2.active .imgsContainer{
+		top: 50%;
+	}
+
+	#iphone-yellow{
+		top: -35px;
+		left: -222px;
+	}
+
+	#iphone-red{
+		top: -194px;
+		left: 106px;
+	}
+
+	#iphone-blue{
+		top: 320px;
+		left: 448px;
+	}
+
+
+
+	/* Overwriting fullPage.js tooltip color
+	* --------------------------------------- */
+	.fp-tooltip{
+		color: #009CD6 !important;
+	}
+	#fp-nav span, .fp-slidesNav span{
+		border-color: #009CD6;
+	}
+	#fp-nav li .active span, .fp-slidesNav .active span{
+		background: #009CD6;
+	}
+	@media all and (min-width: 900px){
+	.fp-section {
+	width: 100%!important;
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 0;
+	transition: all .7s ease-in-out;
+}
+
+.fp-section.active {
+	visibility: visible;
+	opacity: 1;
+	z-index: 1;
+}
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				'verticalCentered': false,
+				'css3': true,
+				'anochor': ['#dentaprint', '#technologia', '#material', '#kontakt'],
+				'navigation': true,
+				'navigationPosition': 'right',
+				'navigationTooltips': [ 'Dentaprint', 'Aplikacie', 'Technológia', 'Materiály', 'Kontakt'],
+				'showActiveTooltip': true,
+						'responsiveWidth': 900,
+						'fadingEffect':true,
+						'fadingEffectKey': 'YWx2YXJvdHJpZ28uY29tXzAzN1ptRmthVzVuUldabVpXTjBiNXo=',
+
+
+
+
+				'afterLoad': function(anchorLink, index){
+					if(index == 2){
+						$('#iphone3, #iphone2, #iphone4').addClass('active');
+					}
+				},
+
+				'onLeave': function(index, nextIndex, direction){
+					if (index == 3 && direction == 'down'){
+						$('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
+					}
+					else if(index == 3 && direction == 'up'){
+						$('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
+					}
+
+					$('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
+					$('#staticImg').toggleClass('moveDown', nextIndex == 4);
+					$('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
+				}
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="header"><a href="dentaprint.sk"><img src="imgs/logo-dentaprint.png" alt="logo DENTAPRINT"/></a></div>
+
+<div id="fullpage">
+
+	
+	<div class="section" id="section1" data-anchor="dentaprint">
+		<div class="wrap">
+		
+
+			<div class="box">
+                  <div class="span2"><img src="imgs/biokompatibilny-zuby.jpg" alt="Biokompatibilný materiál"  /></div>
+                  <div class="span2"><h2>Dentaprint</h2>
+				 3D tlač v medicíne a stomatológií je trendom, ktorý mení celé odvetvie. 
+Hlavnými oblasťami sú implantológia a ortodoncia.  
+Dentaprint Vám prináša profesionálne riešenie v tejto oblasti. </div>
+
+			</div>
+		</div>
+	</div>
+<div class="section" id="section2" data-anchor="aplikacie">
+		<div class="wrap">
+		
+
+			<div class="box">
+                  <div class="span2"><img src="imgs/biokompatibilny-zuby-2.jpg" alt="Biokompatibilný materiál"  /></div>
+                  <div class="span2"><h2>Dentaprint</h2>
+				 3D tlač v medicíne a stomatológií je trendom, ktorý mení celé odvetvie. 
+Hlavnými oblasťami sú implantológia a ortodoncia.  
+Dentaprint Vám prináša profesionálne riešenie v tejto oblasti. </div>
+
+			</div>
+		</div>
+	</div>
+	<div class="section moveDown" id="section3" data-anchor="technologia">
+		<div class="wrap">
+			<div class="box">
+				
+                <div class="span2"><img src="imgs/form-2-printer.jpg" alt="3D tlačiareň Form 2"  /></div><div class="span2"><h2>Technológia</h2>Požívame špičkovú tlačiareň <strong>Form 2</strong> od spoločnosti Formlabs a veľmi presnú technológiu SLA</div>
+				
+
+			</div>
+			
+		</div>
+	</div>
+    <div class="section moveDown" id="section4" data-anchor="material">
+		<div class="wrap">
+			
+
+			<div class="box">
+				
+                <div class="span2"><img src="imgs/dentaprint-materials-formlabs.png" alt="Materialy"  /></div><div class="span2"><h2>Materiály</h2>Biokompatibilný materiál - je certifikovaný materiál ... vhodný pri zavádzaní implantátov alebo iných chirurgických zákrokoch<br><br>
+Štandardný sivý materiál - materiál s vysokou presnosťou</div>
+				
+
+			</div>
+		</div>
+	</div>
+	<div class="section moveDown" id="section3" data-anchor="kontakt">
+		<div class="wrap">
+			<div class="box">
+				<h2>Kontakt</h2>
+				+421 908 135 944<br>
+                info@dentaprint.sk<br><br>Facebook
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+</body>
+</html>
