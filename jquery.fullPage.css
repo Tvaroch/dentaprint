@@ -112,6 +112,8 @@ html.fp-enabled,
 }
 #fp-nav.right {
     right: 17px;
+    border: 2px solid #ccc;
+    border-radius:20px;
 }
 #fp-nav.left {
     left: 17px;
