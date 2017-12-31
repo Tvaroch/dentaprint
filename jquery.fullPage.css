@@ -229,3 +229,7 @@ html.fp-enabled,
 .fp-responsive .fp-auto-height-responsive .fp-tableCell {
     height: auto !important;
 }
+.link-body {
+    font-size:14px;
+    color: #009CD6 !important;
+}
