@@ -234,3 +234,7 @@ html.fp-enabled,
     color: #009CD6 !important;
     border-bottom:none;
 }
+.link-body2 {
+		color: #808080 !important;
+	border-bottom: 3px solid #009CD6;
+}
