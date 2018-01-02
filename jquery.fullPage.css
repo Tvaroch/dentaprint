@@ -232,4 +232,5 @@ html.fp-enabled,
 .link-body {
     font-size:14px;
     color: #009CD6 !important;
+    border-bottom:none;
 }
