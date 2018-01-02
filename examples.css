@@ -10,7 +10,7 @@ a{
 	text-decoration:none;
 
 }
-a .span2 {
+.span2 a {
 		color: #808080 !important;
 	border-bottom: 3px solid #009CD6;
 }
