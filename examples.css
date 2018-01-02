@@ -8,6 +8,10 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 }
 a{
 	text-decoration:none;
+	color: #009CD6 !important;
+}
+a:hover {
+	text-decoration:underline;
 }
 table {
     border-spacing: 0;
